@@ -13,3 +13,5 @@ if __name__ == "__main__":
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+# this file is a script that helps with management of the site. With it I can start a web server on the computer without installing anything else

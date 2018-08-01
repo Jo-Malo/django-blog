@@ -2,7 +2,9 @@ from django.db import models
 from django.utils import timezone
 
 class Post(models.Model):
-    # models.Model means it should be saved in db
+    # models.Model means it is django & should be saved in db
+    # class means defining an object
+    # foreign key is a link to another model
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()

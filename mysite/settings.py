@@ -1,3 +1,4 @@
+# website at http://127.0.0.1:8000/
 """
 Django settings for mysite project.
 
@@ -29,6 +30,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
+# telling DJANGO to use the blog
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -73,7 +75,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+# USES SQLITE3 AS DATABASE, AUTOMATICALLY SET UP IN settings. db created in console with: python manage.py migrate
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -117,7 +119,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+# below is a path to static files in blog folder
 STATIC_URL = '/static/'
 STATIC_ROOT : os.path.join(BASE_DIR, 'static')
 
