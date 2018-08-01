@@ -5,6 +5,7 @@ class Post(models.Model):
     # models.Model means it is django & should be saved in db
     # class means defining an object
     # foreign key is a link to another model
+    # could use local database to experiment (safer)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
