@@ -13,12 +13,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Build paths inside the project: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '57^s75o8v$hmq-%u54hgve6qh*3=$4kp)uwww+_f5*kk0x8q13'
@@ -30,7 +27,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
-# telling DJANGO to use the blog
+# tells DJANGO to use the blog
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -73,7 +70,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 # USES SQLITE3 AS DATABASE, AUTOMATICALLY SET UP IN settings. db created in console with: python manage.py migrate
 DATABASES = {
@@ -83,8 +79,6 @@ DATABASES = {
     }
 }
 
-
-# Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -103,8 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
+# Internationalization https://docs.djangoproject.com/en/2.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -117,9 +110,9 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript, Images) with path to them in blog folder
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-# below is a path to static files in blog folder
+
 STATIC_URL = '/static/'
 STATIC_ROOT : os.path.join(BASE_DIR, 'static')
 
